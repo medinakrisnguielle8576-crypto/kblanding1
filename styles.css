@@ -1,0 +1,21 @@
+* {
+  font-family: "Brush Script MT", cursive;
+  display: flex;
+}
+
+header #company-name {
+  text-align: left;
+}
+
+.nav-bar {
+  align-content: right;
+  float: right;
+}
+
+div .gallery-container {
+  background-image: url(https://cdn.wallpapersafari.com/78/69/5sHZEr.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+}
