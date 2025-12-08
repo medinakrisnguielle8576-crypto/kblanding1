@@ -10,36 +10,40 @@ html {
 
 header {
   display: flex;
-  flex-direction: column;
-  align-items: start;
-  align-self: center;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   background-color: black;
   color: aliceblue;
-  width: 100vw;
+  width: 100%;
   height: 50px;
-  font-family: "Brush Script MT", "Lucida Sans", "Lucida Sans Regular",
-    "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  position: fixed;
+  z-index: 1000;
+  font-family: "Brush Script MT", cursive;
 }
 
-#company-name,
-.logo {
-  margin-left: 10px;
+div .company-name-logo {
+  background-color: black;
+  color: aliceblue;
+
+  font-family: "Brush Script MT", "Lucida Sans", "Lucida Sans Regular",
+    "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   top: 0;
+  left: 0;
+  margin-left: 10px;
   padding: 2px 2px 2px 2px;
 }
 
 .nav-bar {
-  font-size: 1.5rem;
-  align-items: end;
-  align-self: auto;
-
-  margin-left: 600px;
+  display: inline;
+  flex-direction: column-reverse;
+  justify-content: space-between;
 }
 
 .nav-link {
   color: aliceblue;
   text-decoration: none;
+  font-size: 1.7rem;
+  margin-left: 5px;
 }
 
 .nav-link:hover {
@@ -55,15 +59,20 @@ body {
   width: 100%;
 }
 
-hero {
+main {
+  margin-top: 100px;
   text-align: center;
-  align-items: center;
-  justify-content: center;
-  margin-top: 400px;
+  font-family: "Brush Script MT", cursive;
 }
 
 #email,
-input {
-  box-sizing: border-box;
+input button {
   align-self: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.pricing-teir {
+  display: grid;
+  grid-template-columns: repeat(3);
 }
