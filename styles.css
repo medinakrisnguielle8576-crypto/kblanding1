@@ -1,3 +1,6 @@
+* {
+  text-align: center;
+}
 html {
   display: flex;
   flex-direction: column;
@@ -72,7 +75,33 @@ input button {
   justify-content: center;
 }
 
-.pricing-teir {
+div .grid-container {
   display: grid;
-  grid-template-columns: repeat(3);
+  grid-template-columns: 3, 1fr; /*col1=rookie, col2=advance, col3=pro*/
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid black;
+  column-count: 3;
+  column-gap: 10px;
+  width: 100px;
+}
+
+.column1 {
+  display: flexbox;
+  flex-direction: column;
+  column-gap: 10px;
+  float: inline-start;
+}
+.columm2 {
+  display: flexbox;
+  flex-direction: column;
+  column-gap: 10px;
+  float: right;
+}
+
+.column3 {
+  display: flexbox;
+  column-gap: 20px;
+  flex-direction: column;
+  float: inline-end;
 }
