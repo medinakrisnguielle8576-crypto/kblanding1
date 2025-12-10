@@ -75,33 +75,97 @@ input button {
   justify-content: center;
 }
 
-div .grid-container {
-  display: grid;
-  grid-template-columns: 3, 1fr; /*col1=rookie, col2=advance, col3=pro*/
+.gallery-grid-container,
+.package-grid-container {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.package-grid-container {
+  justify-items: center;
+}
+
+.gallery-column {
+  column-gap: 200px;
+}
+
+.pricing-teir {
+  border: 3px solid darkgray;
+  padding: 10px 10px 10px 10px;
   align-items: center;
+}
+
+.gallery-grid-header {
+  font-size: 4rem;
+  margin-top: 200px;
+  margin-bottom: 20px;
+  gap: 20px;
+  color: darkslategray;
+}
+images .gallery-grid-container {
+  width: 150px;
+  height: 150px;
+}
+
+@media (max-width: 600px) {
+  images {
+    align-items: center;
+    min-width: min-content;
+    min-height: min-content;
+  }
+
+  .gallery-grid-container,
+  .package-grid-container {
+    align-items: center;
+  }
+
+  .package-grid-container {
+    justify-items: center;
+  }
+
+  .gallery-column {
+    column-gap: 5px;
+  }
+
+  .pricing-teir {
+    border: 3px solid darkgray;
+    padding: 2px 2px 2px 2px;
+    align-items: center;
+  }
+
+  .gallery-grid-header {
+    font-size: 0.5rem;
+    margin-top: 5px;
+    margin-bottom: 1px;
+    color: darkslategray;
+  }
+}
+
+.row1 {
+  font-size: larger;
+  color: darkslategrey;
+}
+
+.row2 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: medium;
+}
+
+.footer-continer {
+  background-color: black;
+  color: aliceblue;
+  width: 100%;
+  height: auto;
+}
+
+copyright {
+  text-align: left;
+}
+
+.contact {
+  display: inline-flex;
   justify-content: space-between;
-  border: 2px solid black;
-  column-count: 3;
-  column-gap: 10px;
-  width: 100px;
-}
-
-.column1 {
-  display: flexbox;
-  flex-direction: column;
-  column-gap: 10px;
-  float: inline-start;
-}
-.columm2 {
-  display: flexbox;
-  flex-direction: column;
-  column-gap: 10px;
-  float: right;
-}
-
-.column3 {
-  display: flexbox;
-  column-gap: 20px;
-  flex-direction: column;
-  float: inline-end;
 }
