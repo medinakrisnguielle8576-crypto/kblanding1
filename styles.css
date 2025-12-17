@@ -1,6 +1,9 @@
 * {
   text-align: center;
+  display:flexbox;
+  box-sizing: border-box;
 }
+
 html {
   display: flex;
   flex-direction: column;
@@ -9,44 +12,62 @@ html {
   top: 0;
   left: 0;
   background-color: black;
+   font-size: 1rem;
+  color: white;
 }
 
-header {
+.header-container {
   display: flex;
+  flex-direction:row;
   justify-content: space-between;
   align-items: center;
+  top:0;
+  left:0; 
+  width:100%;
+  height:50px;
   background-color: black;
-  color: aliceblue;
-  width: 100%;
-  height: 50px;
   position: fixed;
   z-index: 1000;
-  font-family: "Brush Script MT", cursive;
 }
 
-div .company-name-logo {
-  background-color: black;
+header h1{
+  font-size: 1.5rem;
   color: aliceblue;
-
-  font-family: "Brush Script MT", "Lucida Sans", "Lucida Sans Regular",
-    "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  top: 0;
-  left: 0;
   margin-left: 10px;
-  padding: 2px 2px 2px 2px;
+}
+@media screen {
+  header h1{
+    font-size: 1rem;
+  }
+  .logo{
+    width:20px;
+    height:20px;
+  }
+  
 }
 
 .nav-bar {
-  display: inline;
-  flex-direction: column-reverse;
+  display: inline-flexbox;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  margin-right: 10px;
+  float:right;
 }
 
 .nav-link {
+  display: inline;
+  text-align: right;
   color: aliceblue;
   text-decoration: none;
-  font-size: 1.7rem;
+  font-size: 2m;
   margin-left: 5px;
+}
+@media (max-width: 600px) {
+ .nav-link {
+    font-size: 1rem;
+    margin-left: 2px;
+  }
 }
 
 .nav-link:hover {
@@ -65,7 +86,6 @@ body {
 main {
   margin-top: 100px;
   text-align: center;
-  font-family: "Brush Script MT", cursive;
 }
 
 #email,
@@ -75,97 +95,48 @@ input button {
   justify-content: center;
 }
 
-.gallery-grid-container,
-.package-grid-container {
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.project-grid-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.price-grid-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.package-grid-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.column{
   display: flex;
-  flex-direction: row;
-  gap: 50px;
-  justify-content: center;
-  margin-bottom: 100px;
-}
-
-.package-grid-container {
-  justify-items: center;
-}
-
-.gallery-column {
-  column-gap: 200px;
-}
-
-.pricing-teir {
-  border: 3px solid darkgray;
-  padding: 10px 10px 10px 10px;
+  flex-direction: column;
   align-items: center;
 }
 
-.gallery-grid-header {
-  font-size: 4rem;
-  margin-top: 200px;
-  margin-bottom: 20px;
-  gap: 20px;
-  color: darkslategray;
-}
-images .gallery-grid-container {
-  width: 150px;
-  height: 150px;
-}
-
-@media (max-width: 600px) {
-  images {
-    align-items: center;
-    min-width: min-content;
-    min-height: min-content;
-  }
-
-  .gallery-grid-container,
-  .package-grid-container {
-    align-items: center;
-  }
-
-  .package-grid-container {
-    justify-items: center;
-  }
-
-  .gallery-column {
-    column-gap: 5px;
-  }
-
-  .pricing-teir {
-    border: 3px solid darkgray;
-    padding: 2px 2px 2px 2px;
-    align-items: center;
-  }
-
-  .gallery-grid-header {
-    font-size: 0.5rem;
-    margin-top: 5px;
-    margin-bottom: 1px;
-    color: darkslategray;
-  }
-}
-
-.row1 {
-  font-size: larger;
-  color: darkslategrey;
-}
-
-.row2 {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: medium;
-}
-
-.footer-continer {
-  background-color: black;
-  color: aliceblue;
-  width: 100%;
-  height: auto;
-}
-
-copyright {
+footer {
   text-align: left;
-}
+  background-color: black;
+  color: white;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  left:0;
+  width: 100%;
+  margin-top: 200px;
+  font-size:smaller;
 
-.contact {
-  display: inline-flex;
-  justify-content: space-between;
-}
+} 
